@@ -40,6 +40,8 @@ public:
     * \param sizeParam     Size parameter of the lattice.
     * \param gen           Generating vector.
     */
+    
+    // Constructor with sizeParam and gen
    LatDef(
          SizeParam<LAT> sizeParam = SizeParam<LAT>(),
          GeneratingVector gen = GeneratingVector()
@@ -47,7 +49,7 @@ public:
       m_sizeParam(std::move(sizeParam)),
       m_gen(std::move(gen))
    {}
-
+    // Constructor of copy 
    template <LatType L>
    LatDef(const LatDef<L>& other): LatDef(other.sizeParam(), other.gen())
    {}
